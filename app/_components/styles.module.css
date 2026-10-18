@@ -6468,7 +6468,7 @@
   background-color: rgba(0, 0, 0, 0);
   background-position: 0% 0%;
   border-color: rgb(0, 0, 0);
-  bottom: 832px;
+  bottom: auto;
   color: rgb(0, 0, 0);
   display: block;
   flex-direction: row;
@@ -6483,10 +6483,22 @@
   object-fit: fill;
   overflow: visible;
   position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   text-align: start;
   transform-origin: 720px 34px;
-  width: 1440px;
+  width: 100%;
   z-index: 10;
+}
+
+.div-88 .desktop {
+  width: 100%;
+}
+
+.div-88 .container {
+  max-width: 1360px;
+  width: 100%;
 }
 
 .div-89 {
