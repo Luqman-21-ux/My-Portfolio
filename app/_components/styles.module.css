@@ -6586,6 +6586,25 @@
   transform-origin: left;
 }
 
+.nav-contact-button {
+  background: rgb(17, 17, 17);
+  border-radius: 64px;
+  box-shadow: 0 9px 22px rgba(17, 17, 17, 0.18);
+  color: rgb(255, 255, 255);
+  padding: 11px 20px;
+  transition: box-shadow 220ms ease, transform 220ms ease;
+}
+
+.nav-contact-button::after {
+  display: none;
+}
+
+.nav-contact-button:hover,
+.nav-contact-button:focus-visible {
+  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.27);
+  transform: translateY(-1px);
+}
+
 .works,
 .services,
 .how-it-works,
@@ -6622,6 +6641,10 @@
   .nav-link {
     font-size: 12px;
     padding-inline: 0;
+  }
+
+  .nav-contact-button {
+    padding: 9px 12px;
   }
 }
 
@@ -10979,15 +11002,6 @@
   }
 }
 
-@keyframes sci-fi-scan {
-  from {
-    transform: translateX(-120%);
-  }
-  to {
-    transform: translateX(340%);
-  }
-}
-
 .intro-loader {
   align-items: center;
   background: rgb(17, 17, 17);
@@ -11004,8 +11018,7 @@
   z-index: 10000;
 }
 
-.intro-loader::before,
-.intro-loader::after {
+.intro-loader::before {
   content: "";
   pointer-events: none;
   position: absolute;
@@ -11018,13 +11031,6 @@
   opacity: 0.55;
   top: 50%;
   width: 70%;
-}
-
-.intro-loader::after {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
-  height: min(74vw, 760px);
-  width: min(74vw, 760px);
 }
 
 .intro-loader-leaving {
@@ -11095,40 +11101,10 @@
   width: 3px;
 }
 
-.sci-fi-loader {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 38px;
-  width: min(72vw, 360px);
-}
-
-.loader-track {
-  background: rgba(255, 255, 255, 0.11);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
-  display: block;
-  height: 2px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.loader-scan {
-  animation: sci-fi-scan 1150ms cubic-bezier(0.65, 0, 0.35, 1) infinite;
-  background: linear-gradient(90deg, transparent, rgb(245, 244, 237), transparent);
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 34%;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .intro-grid,
   .intro-eyebrow,
-  .intro-cursor,
-  .loader-scan {
+  .intro-cursor {
     animation: none;
   }
 

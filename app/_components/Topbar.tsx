@@ -17,7 +17,11 @@ export default function Topbar(_props: { slots?: string[] } = {}) {
 
         <div className={styles["nav-links"]}>
           {navigation.map((item) => (
-            <a className={styles["nav-link"]} href={item.href} key={item.href}>
+            <a
+              className={`${styles["nav-link"]} ${item.label === "Contact" ? styles["nav-contact-button"] : ""}`}
+              href={item.href}
+              key={item.href}
+            >
               {item.label}
             </a>
           ))}

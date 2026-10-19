@@ -71,11 +71,6 @@ export default function IntroLoader() {
           <span>{displayedName}</span>
           <span className={styles["intro-cursor"]} />
         </h1>
-        <div className={styles["sci-fi-loader"]} aria-hidden="true">
-          <span className={styles["loader-track"]}>
-            <span className={styles["loader-scan"]} />
-          </span>
-        </div>
       </div>
     </div>
   )
