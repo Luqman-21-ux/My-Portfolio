@@ -29,11 +29,11 @@ export default function Home({ slots = [] }: { slots?: string[] }) {
         <div className={styles["div-87"]}>
           <div className={styles["div-88"]}>
             <div className={styles["div-89"]}>
-              <Topbar slots={["Luqman Yusuff","Work","About","Contact","Contact me"]} />
+              <Topbar />
             </div>
           </div>
           <div className={styles["div-90"]}>
-            <header className={styles["hero"]}>
+            <header className={styles["hero"]} id="top">
               <div className={styles["image-container"]}>
                 <div className={styles["div-89"]}>
                   <div className={styles["img-13"]}>
@@ -82,7 +82,7 @@ export default function Home({ slots = [] }: { slots?: string[] }) {
                 </div>
               </div>
             </header>
-            <main className={styles["works"]}>
+            <main className={styles["works"]} id="work">
               <div className={styles["container-4"]}>
                 <div className={styles["headline-2"]}>
                   <div className={styles["div-97"]}>
@@ -139,7 +139,7 @@ export default function Home({ slots = [] }: { slots?: string[] }) {
                 </div>
               </div>
             </section>
-            <section className={styles["services"]}>
+            <section className={styles["services"]} id="services">
               <div className={styles["container-7"]}>
                 <div className={styles["headline-3"]}>
                   <div className={styles["div-104"]}>
@@ -179,7 +179,7 @@ export default function Home({ slots = [] }: { slots?: string[] }) {
                 </div>
               </div>
             </section>
-            <section className={styles["how-it-works"]}>
+            <section className={styles["how-it-works"]} id="process">
               <div className={styles["noise-2"]}>
                 <div className={styles["div-110"]}>
                   <img className={styles["img-15"]} src={slots[14] ?? "https://framerusercontent.com/images/WjZVYjfVNTdo9UKicX5AdploJGc.webp?width=1536&height=1536"} alt="" />
@@ -270,7 +270,7 @@ export default function Home({ slots = [] }: { slots?: string[] }) {
           </div>
           <div className={styles["div-118"]} />
           <div className={styles["div-119"]} />
-          <div className={styles["div-120"]}>
+          <div className={styles["div-120"]} id="contact">
             <div className={styles["div-89"]}>
               <Footer slots={["https://framerusercontent.com/images/WjZVYjfVNTdo9UKicX5AdploJGc.webp?width=1536&height=1536","https://framerusercontent.com/images/gf0u4QlWkWyKQ0V6b90ZogjvkA.jpg?scale-down-to=1024&width=1728&height=2420","Let's have a chat,","Book a Call","Navigation","Home","Works","About","Contact","Connect","X (Twitter)","Instagram","Linkedin","©Irise Studio 2026. All rights reserved.","Framer"]} />
             </div>
