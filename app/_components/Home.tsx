@@ -36,7 +36,7 @@ export default function Home({ slots = [] }: { slots?: string[] }) {
                 <div className={styles["div-89"]}>
                   <div className={styles["img-13"]}>
                     <div className={styles["div-91"]}>
-                      <img className={styles["img-14"]} src={slots[0] ?? "https://framerusercontent.com/images/j9Vecp8KvmvrjMJOiFKW7bfOr5g.png?scale-down-to=2048&width=1728&height=2420"} alt="" />
+                      <img className={styles["img-14"]} src={slots[0] ?? "/images/luqman-hero.png"} alt="Portrait of Luqman Yusuff" />
                     </div>
                   </div>
                 </div>
