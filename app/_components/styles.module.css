@@ -10691,6 +10691,172 @@
   }
 }
 
+/* Full-viewport hero composition */
+.div-86,
+.div-87 {
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+}
+
+.hero {
+  display: block;
+  height: 100svh;
+  min-height: 720px;
+  position: relative;
+  width: 100%;
+}
+
+.image-container {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.img-13 {
+  aspect-ratio: 1059 / 1485;
+  bottom: -3%;
+  height: min(84svh, 980px);
+  left: 50%;
+  right: auto;
+  top: auto;
+  transform: translateX(-50%);
+  transform-origin: center bottom;
+  width: auto;
+}
+
+.div-91,
+.img-14 {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.img-14 {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.blur-2 {
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.16) 42%, rgb(255, 255, 255) 100%);
+  bottom: 0;
+  height: 30%;
+  top: auto;
+  width: 100%;
+}
+
+.content-4 {
+  align-items: flex-end;
+  bottom: 0;
+  height: auto;
+  left: 0;
+  padding: 0 clamp(32px, 3.2vw, 64px) clamp(38px, 5vh, 72px);
+  right: 0;
+  top: auto;
+  width: 100%;
+}
+
+.container-3 {
+  align-items: flex-end;
+  height: auto;
+  max-width: none;
+  min-height: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.headline {
+  height: auto;
+  justify-content: flex-end;
+  max-width: 720px;
+  width: 39%;
+}
+
+.div-94,
+.h1 {
+  height: auto;
+  width: 100%;
+}
+
+.h1,
+.span-3,
+.br,
+.span-4,
+.span-5 {
+  font-size: clamp(2.55rem, 3.35vw, 4rem);
+  letter-spacing: -0.055em;
+  line-height: 1.01;
+}
+
+.desc {
+  height: auto;
+  max-width: 430px;
+  width: 25%;
+}
+
+.div-95,
+.p-47 {
+  height: auto;
+  width: 100%;
+}
+
+.p-47 {
+  font-size: clamp(1rem, 1.12vw, 1.25rem);
+  line-height: 1.42;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .img-13 {
+    bottom: 12%;
+    height: min(70svh, 650px);
+  }
+
+  .blur-2 {
+    height: 48%;
+  }
+
+  .content-4 {
+    padding: 0 24px 30px;
+  }
+
+  .container-3 {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .headline,
+  .desc {
+    max-width: 620px;
+    width: 100%;
+  }
+
+  .headline {
+    gap: 10px;
+  }
+
+  .desc {
+    gap: 16px;
+  }
+
+  .h1,
+  .span-3,
+  .br,
+  .span-4,
+  .span-5 {
+    font-size: clamp(2rem, 7.4vw, 3.4rem);
+  }
+
+  .p-47 {
+    max-width: 440px;
+  }
+}
+
 /* Cinematic launch sequence */
 @keyframes intro-grid-drift {
   from {
