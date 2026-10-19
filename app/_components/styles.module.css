@@ -10580,3 +10580,113 @@
   transform-origin: 277px 209.992px;
   width: 554px;
 }
+
+/* Motion system */
+@keyframes nav-glass-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-rise-enter {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes portrait-enter {
+  from {
+    opacity: 0;
+    transform: translateY(36px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes work-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.div-88 {
+  animation: nav-glass-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.image-container {
+  animation: portrait-enter 1100ms 100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.headline {
+  animation: hero-rise-enter 850ms 180ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.desc {
+  animation: hero-rise-enter 850ms 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.primary,
+.primary-2,
+.primary-inverse,
+.filled-5 {
+  transition: box-shadow 260ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.primary:hover,
+.primary-2:hover,
+.primary-inverse:hover,
+.filled-5:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.desktop-2 {
+  transition: box-shadow 360ms ease, transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.desktop-2:hover {
+  box-shadow: 0 24px 60px rgba(17, 17, 17, 0.14);
+  transform: translateY(-8px) scale(1.01);
+}
+
+@supports (animation-timeline: view()) {
+  .div-100 {
+    animation: work-card-enter linear both;
+    animation-range: entry 5% cover 32%;
+    animation-timeline: view();
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .div-88,
+  .image-container,
+  .headline,
+  .desc,
+  .div-100 {
+    animation: none;
+  }
+
+  .primary,
+  .primary-2,
+  .primary-inverse,
+  .filled-5,
+  .desktop-2 {
+    transition: none;
+  }
+}
