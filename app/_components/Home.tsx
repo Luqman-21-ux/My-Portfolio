@@ -19,10 +19,12 @@ import Main2 from "./Main2"
 import Framer from "./Framer"
 import Text from "./Text"
 import IconButton from "./IconButton"
+import IntroLoader from "./IntroLoader"
 
 export default function Home({ slots = [] }: { slots?: string[] }) {
   return (
     <>
+      <IntroLoader />
       <div className={styles["div-86"]}>
         <div className={styles["div-87"]}>
           <div className={styles["div-88"]}>
