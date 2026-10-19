@@ -540,7 +540,7 @@
   background-color: rgb(17, 17, 17);
   background-position: 0% 0%;
   border-color: rgb(0, 0, 238);
-  border-radius: 16px;
+  border-radius: 64px;
   box-shadow: rgba(0, 0, 0, 0.05) 0.474223px 0.474223px 0.670652px -0.2px, rgba(0, 0, 0, 0.06) 1.29143px 1.29143px 1.82636px -0.4px, rgba(0, 0, 0, 0.08) 2.83552px 2.83552px 4.01004px -0.6px, rgba(0, 0, 0, 0.11) 6.29421px 6.29421px 8.90136px -0.8px, rgba(0, 0, 0, 0.2) 16px 16px 22.6274px -1px;
   color: rgb(0, 0, 238);
   cursor: pointer;
@@ -707,7 +707,7 @@
   background-color: rgb(17, 17, 17);
   background-position: 0% 0%;
   border-color: rgb(0, 0, 238);
-  border-radius: 16px;
+  border-radius: 64px;
   box-shadow: rgba(0, 0, 0, 0.05) 0.474223px 0.474223px 0.670652px -0.2px, rgba(0, 0, 0, 0.06) 1.29143px 1.29143px 1.82636px -0.4px, rgba(0, 0, 0, 0.08) 2.83552px 2.83552px 4.01004px -0.6px, rgba(0, 0, 0, 0.11) 6.29421px 6.29421px 8.90136px -0.8px, rgba(0, 0, 0, 0.2) 16px 16px 22.6274px -1px;
   color: rgb(0, 0, 238);
   cursor: pointer;
@@ -5344,7 +5344,7 @@
   background-color: rgb(255, 255, 255);
   background-position: 0% 0%;
   border-color: rgb(0, 0, 238);
-  border-radius: 16px;
+  border-radius: 64px;
   color: rgb(0, 0, 238);
   cursor: pointer;
   display: flex;
@@ -6352,7 +6352,7 @@
   background-color: rgb(247, 247, 247);
   background-position: 0% 0%;
   border-color: rgb(0, 0, 238);
-  border-radius: 12px;
+  border-radius: 64px;
   box-shadow: rgba(0, 0, 0, 0.13) 0px 0.636953px 0.636953px -0.625px, rgba(0, 0, 0, 0.13) 0px 1.9316px 1.9316px -1.25px, rgba(0, 0, 0, 0.13) 0px 5.10612px 5.10612px -1.875px, rgba(0, 0, 0, 0.13) 0px 16px 16px -2.5px;
   color: rgb(0, 0, 238);
   cursor: pointer;
