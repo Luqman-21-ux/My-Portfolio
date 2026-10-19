@@ -1,8 +1,12 @@
 .desktop {
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.62);
   background-position: 0% 0%;
-  border-color: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  box-shadow: 0 18px 50px rgba(17, 17, 17, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(255, 255, 255, 0.3);
   color: rgb(0, 0, 0);
   display: flex;
   flex-direction: row;
@@ -14,19 +18,28 @@
   font-weight: 400;
   gap: 10px;
   grid-auto-flow: row;
-  height: 68px;
+  height: 72px;
   justify-content: center;
   object-fit: fill;
-  overflow: visible;
+  overflow: hidden;
   padding-bottom: 10px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 28px;
+  padding-right: 12px;
   padding-top: 10px;
   place-items: center normal;
   position: relative;
   text-align: start;
   transform-origin: 720px 34px;
   width: 1440px;
+}
+
+.desktop::before {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0.24));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
 }
 
 .container {
@@ -50,6 +63,7 @@
   overflow: visible;
   place-items: center normal;
   position: relative;
+  z-index: 1;
   text-align: start;
   transform-origin: 680px 24px;
   width: 1360px;
@@ -6470,7 +6484,7 @@
   border-color: rgb(0, 0, 0);
   bottom: auto;
   color: rgb(0, 0, 0);
-  display: block;
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   flex: 0 0 auto;
@@ -6479,26 +6493,44 @@
   font-stretch: 100%;
   font-weight: 400;
   grid-auto-flow: row;
-  height: 68px;
+  height: 72px;
+  justify-content: center;
   object-fit: fill;
   overflow: visible;
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  top: 18px;
   text-align: start;
   transform-origin: 720px 34px;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 
 .div-88 .desktop {
-  width: 100%;
+  max-width: 1120px;
+  width: calc(100% - 48px);
 }
 
 .div-88 .container {
   max-width: 1360px;
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  .div-88 {
+    top: 12px;
+  }
+
+  .div-88 .desktop {
+    padding-left: 18px;
+    padding-right: 8px;
+    width: calc(100% - 24px);
+  }
+
+  .nav-icons {
+    display: none;
+  }
 }
 
 .div-89 {
