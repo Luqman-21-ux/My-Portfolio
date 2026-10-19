@@ -4,6 +4,19 @@ import { useEffect, useState } from "react"
 import styles from "./styles.module.css"
 
 const name = "Luqman Yusuff"
+const shuffleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+function shuffleName(resolvedCharacters: number) {
+  return name
+    .split("")
+    .map((character, index) => {
+      if (character === " ") return " "
+      if (index < resolvedCharacters) return character
+
+      return shuffleCharacters[Math.floor(Math.random() * shuffleCharacters.length)]
+    })
+    .join("")
+}
 
 export default function IntroLoader() {
   const [displayedName, setDisplayedName] = useState("")
@@ -13,6 +26,7 @@ export default function IntroLoader() {
   useEffect(() => {
     const previousOverflow = document.body.style.overflow
     const timers: number[] = []
+    const intervals: number[] = []
 
     document.body.style.overflow = "hidden"
 
@@ -25,27 +39,42 @@ export default function IntroLoader() {
 
       return () => {
         timers.forEach(window.clearTimeout)
+        intervals.forEach(window.clearInterval)
         document.body.style.overflow = previousOverflow
       }
     }
 
-    name.split("").forEach((_, index) => {
-      timers.push(
-        window.setTimeout(() => {
-          setDisplayedName(name.slice(0, index + 1))
-        }, 500 + index * 105),
-      )
-    })
+    const shuffleStartsAt = 320
+    const letterLockDelay = 115
+    const startedAt = performance.now()
 
-    const typingEndsAt = 500 + name.length * 105
+    setDisplayedName(shuffleName(0))
+
+    const shuffleInterval = window.setInterval(() => {
+      const elapsed = performance.now() - startedAt
+      const resolvedCharacters = Math.max(0, Math.floor((elapsed - shuffleStartsAt) / letterLockDelay))
+
+      if (resolvedCharacters >= name.length) {
+        setDisplayedName(name)
+        window.clearInterval(shuffleInterval)
+        return
+      }
+
+      setDisplayedName(shuffleName(resolvedCharacters))
+    }, 48)
+
+    intervals.push(shuffleInterval)
+
+    const shuffleEndsAt = shuffleStartsAt + name.length * letterLockDelay
 
     timers.push(
-      window.setTimeout(() => setIsLeaving(true), typingEndsAt + 950),
-      window.setTimeout(() => setIsMounted(false), typingEndsAt + 1650),
+      window.setTimeout(() => setIsLeaving(true), shuffleEndsAt + 950),
+      window.setTimeout(() => setIsMounted(false), shuffleEndsAt + 1650),
     )
 
     return () => {
       timers.forEach(window.clearTimeout)
+      intervals.forEach(window.clearInterval)
       document.body.style.overflow = previousOverflow
     }
   }, [])
@@ -69,7 +98,6 @@ export default function IntroLoader() {
         <p className={styles["intro-eyebrow"]}>Welcome to</p>
         <h1 className={styles["intro-name"]} aria-hidden="true">
           <span>{displayedName}</span>
-          <span className={styles["intro-cursor"]} />
         </h1>
       </div>
     </div>

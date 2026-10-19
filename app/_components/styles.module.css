@@ -10993,15 +10993,6 @@
   }
 }
 
-@keyframes intro-cursor-blink {
-  0%, 44% {
-    opacity: 1;
-  }
-  45%, 100% {
-    opacity: 0;
-  }
-}
-
 .intro-loader {
   align-items: center;
   background: rgb(17, 17, 17);
@@ -11091,20 +11082,9 @@
   white-space: nowrap;
 }
 
-.intro-cursor {
-  animation: intro-cursor-blink 760ms steps(1, end) infinite;
-  background: rgb(245, 244, 237);
-  box-shadow: 0 0 16px rgba(255, 255, 255, 0.65);
-  display: inline-block;
-  height: 0.82em;
-  margin-left: 0.08em;
-  width: 3px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .intro-grid,
-  .intro-eyebrow,
-  .intro-cursor {
+  .intro-eyebrow {
     animation: none;
   }
 
