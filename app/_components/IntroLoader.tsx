@@ -75,7 +75,6 @@ export default function IntroLoader() {
           <span className={styles["loader-track"]}>
             <span className={styles["loader-scan"]} />
           </span>
-          <span className={styles["loader-status"]}>SYSTEM INITIALIZING</span>
         </div>
       </div>
     </div>
