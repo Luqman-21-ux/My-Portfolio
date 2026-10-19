@@ -19,16 +19,6 @@ export default function Topbar({ slots = [] }: { slots?: string[] }) {
                     <p className={styles["p-2"]}>{slots[1] ?? "Work"}</p>
                   </div>
                 </a>
-                <a className={styles["about"]} href="./about">
-                  <div className={styles["div-4"]}>
-                    <p className={styles["p-3"]}>{slots[2] ?? "About"}</p>
-                  </div>
-                </a>
-                <a className={styles["contact"]} href="./contact">
-                  <div className={styles["div-5"]}>
-                    <p className={styles["p-4"]}>{slots[3] ?? "Contact"}</p>
-                  </div>
-                </a>
               </div>
             </div>
           </div>
