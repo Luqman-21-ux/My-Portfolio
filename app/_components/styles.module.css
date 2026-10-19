@@ -18,7 +18,7 @@
   font-weight: 400;
   gap: 10px;
   grid-auto-flow: row;
-  height: 72px;
+  height: 68px;
   justify-content: center;
   object-fit: fill;
   overflow: hidden;
@@ -6493,7 +6493,7 @@
   font-stretch: 100%;
   font-weight: 400;
   grid-auto-flow: row;
-  height: 72px;
+  height: 68px;
   justify-content: center;
   object-fit: fill;
   overflow: visible;
