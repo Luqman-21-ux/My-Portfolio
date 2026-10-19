@@ -6606,6 +6606,7 @@
 }
 
 .works,
+.my-stacks,
 .services,
 .how-it-works,
 .div-120 {
@@ -11090,5 +11091,138 @@
 
   .intro-loader {
     transition-duration: 150ms;
+  }
+}
+
+/* Seamless tool marquee */
+@keyframes stack-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.my-stacks {
+  height: auto;
+  padding-bottom: 120px;
+  width: 100%;
+}
+
+.container-5 {
+  gap: 32px;
+  height: auto;
+  max-width: 1120px;
+  width: calc(100% - 48px);
+}
+
+.div-102 {
+  height: auto;
+  width: 100%;
+}
+
+.stack-marquee {
+  align-items: center;
+  background: rgb(249, 248, 247);
+  border-block: 1px solid rgba(17, 17, 17, 0.08);
+  display: flex;
+  height: 132px;
+  mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.stack-track {
+  animation: stack-marquee-scroll 22s linear infinite;
+  display: flex;
+  flex: none;
+  width: max-content;
+  will-change: transform;
+}
+
+.stack-marquee:hover .stack-track {
+  animation-play-state: paused;
+}
+
+.stack-group {
+  align-items: center;
+  display: flex;
+  flex: none;
+  gap: 22px;
+  padding-right: 22px;
+}
+
+.stack-pill {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(17, 17, 17, 0.055);
+  border-radius: 64px;
+  box-shadow: 0 8px 22px rgba(17, 17, 17, 0.045);
+  display: flex;
+  flex: none;
+  gap: 10px;
+  padding: 12px 18px;
+  white-space: nowrap;
+}
+
+.stack-icon {
+  height: 27px;
+  object-fit: contain;
+  width: 27px;
+}
+
+.stack-label {
+  color: rgb(34, 34, 34);
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .my-stacks {
+    padding-bottom: 80px;
+  }
+
+  .container-5 {
+    width: calc(100% - 32px);
+  }
+
+  .stack-marquee {
+    height: 108px;
+    mask-image: linear-gradient(90deg, transparent 0%, black 5%, black 95%, transparent 100%);
+  }
+
+  .stack-track {
+    animation-duration: 18s;
+  }
+
+  .stack-group {
+    gap: 14px;
+    padding-right: 14px;
+  }
+
+  .stack-pill {
+    gap: 8px;
+    padding: 10px 14px;
+  }
+
+  .stack-icon {
+    height: 23px;
+    width: 23px;
+  }
+
+  .stack-label {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-track {
+    animation: none;
   }
 }

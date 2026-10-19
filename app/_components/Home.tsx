@@ -118,7 +118,7 @@ export default function Home({ slots = [] }: { slots?: string[] }) {
                 </div>
               </div>
             </main>
-            <section className={styles["my-stacks"]}>
+            <section className={styles["my-stacks"]} id="tools">
               <div className={styles["container-5"]}>
                 <div className={styles["div-101"]}>
                   <h2 className={styles["h2-3"]}>{slots[7] ?? "My stacks"}</h2>
